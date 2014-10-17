@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 #
 use Env qw/HOME PATH/;
-use File::Path qw/make_path/;
+# use File::Path qw/make_path/;
 
 my $osname = $^O;
 
@@ -18,14 +18,8 @@ if ($git =~ "0") {
 }
 
 my @dirs = (".vim", ".vim/autoload", ".vim/bundle", ".vim/colors");
-if ($osname =~ /MSWin32/) {
-    @dirs = ("vimfiles", "vimfiles/autoload", "vimfiles/bundle", "vimfiles/colors");
-}
 
 my $main_dir = ".vim";
-if ($osname =~ /MSWin32/) {
-    $main_dir = "vimfiles";
-}
 
 my $gitlist = {
 	"autoload/pathogen_folder" => 'https://github.com/tpope/vim-pathogen.git',
@@ -33,6 +27,7 @@ my $gitlist = {
 	"bundle/vim-matchit" => 'https://github.com/tmhedberg/matchit.git',
 	"bundle/vim-rails" => 'https://github.com/tpope/vim-rails.git',
 	"bundle/vim-sensible" => 'https://github.com/tpope/vim-sensible.git',
+	"bundle/vim-abolish" => 'https://github.com/tpope/vim-abolish.git',
 	"bundle/vim-eunuch" => 'https://github.com/tpope/vim-eunuch.git',
 	"bundle/vim-sleuth" => 'https://github.com/tpope/vim-sleuth.git',
 	"bundle/vim-repeat" => 'https://github.com/tpope/vim-repeat.git',
@@ -40,6 +35,7 @@ my $gitlist = {
 	"bundle/vim-bundler" => 'https://github.com/tpope/vim-bundler.git',
 	"bundle/vim-fugitive" => 'https://github.com/tpope/vim-fugitive.git',
 	"bundle/vim-scriptease" => 'https://github.com/tpope/vim-scriptease.git',
+	"bundle/vim-syntastic" => 'https://github.com/scrooloose/syntastic.git',
 	"bundle/vim-nerdtree" => 'https://github.com/scrooloose/nerdtree.git',
 	"bundle/vim-tlib" => 'https://github.com/tomtom/tlib_vim.git',
 	"bundle/vim-mw-utils" => 'https://github.com/MarcWeber/vim-addon-mw-utils.git',
@@ -53,6 +49,7 @@ my $gitlist = {
 	"bundle/vim-easymotion" => 'https://github.com/Lokaltog/vim-easymotion.git',
 	"bundle/vim-ruby" => 'https://github.com/vim-ruby/vim-ruby.git',
 	"bundle/css-color" => 'https://github.com/skammer/vim-css-color.git',
+	"bundle/vim-blade" => 'https://github.com/xsbeats/vim-blade.git',
 	"bundle/vim-rainbow-parens" => 'https://github.com/kien/rainbow_parentheses.vim.git',
 	"bundle/vim-ctrlP" => 'https://github.com/kien/ctrlp.vim.git',
 	"bundle/vim-multiple-cursors" => 'https://github.com/terryma/vim-multiple-cursors.git',
@@ -64,7 +61,7 @@ chdir "$HOME";
 foreach my $dir (@dirs) {
 	if ( not (-d $dir)) {
 		print "Directory $dir not available\n";
-		make_path($dir);
+		mkdir $dir;
 	}
 }
 
