@@ -49,6 +49,7 @@ my $gitlist = {
 	"bundle/vim-easymotion" => 'https://github.com/Lokaltog/vim-easymotion.git',
 	"bundle/vim-ruby" => 'https://github.com/vim-ruby/vim-ruby.git',
 	"bundle/css-color" => 'https://github.com/skammer/vim-css-color.git',
+	"bundle/vim-phpcomplete-extended-laravel" => 'https://github.com/m2mdas/phpcomplete-extended-laravel.git',
 	"bundle/vim-blade" => 'https://github.com/xsbeats/vim-blade.git',
 	"bundle/vim-rainbow-parens" => 'https://github.com/kien/rainbow_parentheses.vim.git',
 	"bundle/vim-ctrlP" => 'https://github.com/kien/ctrlp.vim.git',
