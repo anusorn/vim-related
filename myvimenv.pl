@@ -54,6 +54,7 @@ my $gitlist = {
 	"bundle/vim-blade" => 'https://github.com/xsbeats/vim-blade.git',
 	"bundle/vim-rainbow-parens" => 'https://github.com/kien/rainbow_parentheses.vim.git',
 	"bundle/vim-ctrlP" => 'https://github.com/kien/ctrlp.vim.git',
+	"bundle/vim-go" =>  'https://github.com/fatih/vim-go.git',
 	"bundle/vim-multiple-cursors" => 'https://github.com/terryma/vim-multiple-cursors.git',
 };
 
