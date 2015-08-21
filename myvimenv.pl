@@ -7,13 +7,24 @@ my $osname = $^O;
 
 my $git = `which git | wc -l`;
 if ($git =~ "0") {
-	print "Need to install GIT first!\n";
-    exit 1;
+	my $distri = `lsb_release -i | awk {print $NF;}`
+	if ($distri =~ "Ubuntu") {
+	    system("sudo apt-get -y install git");
+	} elsif ( -f "/etc/debian_version" ) {
+	    system("sudo apt-get -y install git");
+	} elsif (-f "/etc/redhat-release") { # let assume Redhat or CentOS
+	    system("sudo yum install git");
+	    # system("sudo dnf install git");
+	    # this may not work with Fedora!
+	} else {
+	    print "Need to install GIT first!\n";
+	    exit 1;
+	}
 	# need to check if I run on Redhat or Ubuntu
-	if ( -f "/etc/debian_version" ) {
-		system("sudo apt-get -y install git");
-	} else { # let assume Redhat or CentOS
-		system("sudo yum install git");
+	$gitexist = `which git | wc -l`;
+	if ($gitexist =~ "0") {
+	    print "Could not install GIT, please manually install GIT\n";
+	    exit 1;
 	}
 }
 
