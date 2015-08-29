@@ -7,7 +7,7 @@ my $osname = $^O;
 
 my $git = `which git | wc -l`;
 if ($git =~ "0") {
-	my $distri = `lsb_release -i | awk {print $NF;}`
+	my $distri = `lsb_release -i | awk {print $NF;}`;
 	if ($distri =~ "Ubuntu") {
 	    system("sudo apt-get -y install git");
 	} elsif ( -f "/etc/debian_version" ) {
