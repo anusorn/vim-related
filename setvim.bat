@@ -44,11 +44,12 @@ set script[28]=https://github.com/ap/vim-css-color.git
 set script[29]=https://github.com/kien/rainbow_parentheses.vim.git
 set script[30]=https://github.com/kien/ctrlp.vim.git
 set script[31]=https://github.com/terryma/vim-multiple-cursors.git
+set script[32]=https://github.com/altercation/vim-colors-solarized.git
 REM -- end of list
 REM
 REM --- iterate through the list using FOR /L
 REM
-for /l %%n in (0,1,31) do (
+for /l %%n in (0,1,32) do (
 	cd "%USERPROFILE%\vimfiles\bundle"
 	git clone !script[%%n]!
 )
