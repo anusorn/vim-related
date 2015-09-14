@@ -67,6 +67,7 @@ my $gitlist = {
 	"bundle/vim-ctrlP" => 'https://github.com/kien/ctrlp.vim.git',
 	"bundle/vim-go" =>  'https://github.com/fatih/vim-go.git',
 	"bundle/vim-multiple-cursors" => 'https://github.com/terryma/vim-multiple-cursors.git',
+	"bundle/vim-colors-solarized" => 'https://github.com/altercation/vim-colors-solarized.git',
 };
 
 # we need to be at the HOME
