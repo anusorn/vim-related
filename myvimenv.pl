@@ -1,8 +1,9 @@
 #!/usr/bin/env perl
 #
-use Env qw/HOME PATH/;
+# use Env qw/HOME PATH/;
 # use File::Path qw/make_path/;
 
+$HOME = $ENV{'HOME'};
 my $osname = $^O;
 
 my $git = `which git | wc -l`;
