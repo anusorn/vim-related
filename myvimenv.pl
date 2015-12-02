@@ -68,6 +68,11 @@ my $gitlist = {
     "bundle/vim-rainbow-parens" => 'https://github.com/kien/rainbow_parentheses.vim.git',
     "bundle/vim-ctrlP" => 'https://github.com/kien/ctrlp.vim.git',
     "bundle/vim-go" =>  'https://github.com/fatih/vim-go.git',
+    "bundle/vim-erlang-runtime" => 'https://github.com/vim-erlang/vim-erlang-runtime.git',
+    "bundle/vim-erlang-compiler" => 'https://github.comvim-erlang/vim-erlang-compiler.git',
+    "bundle/vim-erlang-omnicomplete" => 'https://github.com/vim-erlang/vim-erlang-omnicomplete.git',
+    "bundle/vim-erlang-tags" => 'https://github.com/vim-erlang/vim-erlang-tags.git',
+    "bundle/vim-elixir" => 'https://github.com/elixir-lang/vim-elixir.git',
     "bundle/vim-multiple-cursors" => 'https://github.com/terryma/vim-multiple-cursors.git',
     "bundle/vim-colors-solarized" => 'https://github.com/altercation/vim-colors-solarized.git',
 };
