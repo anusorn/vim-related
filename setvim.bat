@@ -45,6 +45,11 @@ set script[29]=https://github.com/kien/rainbow_parentheses.vim.git
 set script[30]=https://github.com/kien/ctrlp.vim.git
 set script[31]=https://github.com/terryma/vim-multiple-cursors.git
 set script[32]=https://github.com/altercation/vim-colors-solarized.git
+set script[33]=https://github.com/vim-erlang/vim-erlang-runtime.git
+set script[34]=https://github.comvim-erlang/vim-erlang-compiler.git
+set script[35]=https://github.com/vim-erlang/vim-erlang-omnicomplete.git
+set script[36]=https://github.com/vim-erlang/vim-erlang-tags.git
+set script[37]=https://github.com/elixir-lang/vim-elixir.git
 REM -- end of list
 REM
 REM --- iterate through the list using FOR /L
