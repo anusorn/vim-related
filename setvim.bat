@@ -4,6 +4,7 @@ where /q git.exe
 if errorlevel 1 goto GITNOTFOUND
 REM -- git.exe found.
 REM rename the existing vimfiles
+echo "userprofile = %USERPROFILE%"
 if exist "%USERPROFILE%\vimOLD" del /s /f "%USERPROFILE%\vimOLD"
 if exist "%USERPROFILE%\vimfiles" move "%USERPROFILE%\vimfiles" "%USERPROFILE%\vimOLD"
 REM now create directories
@@ -84,6 +85,7 @@ echo    set lines=35 columns=90  >>"%USERPROFILE%\vimfiles\vimrc"
 echo    set guioptions-=T  >>"%USERPROFILE%\vimfiles\vimrc"
 echo end  >>"%USERPROFILE%\vimfiles\vimrc"
 echo colorscheme vividchalk  >>"%USERPROFILE%\vimfiles\vimrc"
+copy "%USERPROFILE%\vimfiles\vimrc" "%USERPROFILE%\_vimrc" 
 goto end
 :GITNOTFOUND
 echo 'GIT is needed, please install and start the script again!'
