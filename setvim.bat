@@ -85,7 +85,7 @@ echo    set lines=35 columns=90  >>"%USERPROFILE%\vimfiles\vimrc"
 echo    set guioptions-=T  >>"%USERPROFILE%\vimfiles\vimrc"
 echo end  >>"%USERPROFILE%\vimfiles\vimrc"
 echo colorscheme vividchalk  >>"%USERPROFILE%\vimfiles\vimrc"
-copy "%USERPROFILE%\vimfiles\vimrc" "%USERPROFILE%\_vimrc" 
+copy "%USERPROFILE%\vimfiles\vimrc" "%USERPROFILE%\.vimrc" 
 goto end
 :GITNOTFOUND
 echo 'GIT is needed, please install and start the script again!'
