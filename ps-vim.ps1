@@ -62,11 +62,6 @@ $scriptsList = @(
 	"https://github.com/kien/ctrlp.vim.git",
 	"https://github.com/terryma/vim-multiple-cursors.git",
 	"https://github.com/altercation/vim-colors-solarized.git",
-	"https://github.com/vim-erlang/vim-erlang-runtime.git",
-	"https://github.comvim-erlang/vim-erlang-compiler.git",
-	"https://github.com/vim-erlang/vim-erlang-omnicomplete.git",
-	"https://github.com/vim-erlang/vim-erlang-tags.git",
-	"https://github.com/elixir-lang/vim-elixir.git"
 )
 
 # --- iterate through the list using FOR /L
