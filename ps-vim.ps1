@@ -61,7 +61,7 @@ $scriptsList = @(
 	"https://github.com/kien/rainbow_parentheses.vim.git",
 	"https://github.com/kien/ctrlp.vim.git",
 	"https://github.com/terryma/vim-multiple-cursors.git",
-	"https://github.com/altercation/vim-colors-solarized.git",
+	"https://github.com/altercation/vim-colors-solarized.git"
 )
 
 # --- iterate through the list using FOR /L
