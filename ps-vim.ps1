@@ -1,20 +1,20 @@
 Write-Output "Start installation..."
 Write-Output "Checking if git is installed..."
-$gitLoc  "None"
-$gitLoc  Get-Command git.exe -errorAction SilentlyContinue
+$gitLoc = "None"
+$gitLoc = Get-Command git.exe -errorAction SilentlyContinue
 if ($gitLoc -Like "None") {
 	Write-Output "Could not find 'git' command! Exit."
 	Exit 99
 }
 Write-Output "Now checking if there is an existing vimOLD file in USERPROFILE..."
-$uprofile  $env:USERPROFILE
-$vimOld  "$uprofile/vimOLD"
+$uprofile = $env:USERPROFILE
+$vimOld  = "$uprofile/vimOLD"
 if (Test-Path -Path $vimOld) {
 	Write-Output "$vimOld exists. Deleting existing $vimOld..."
 	Remove-Item -Path "$vimOld" -Force -Recurse
 }
 Write-Output "Checking if there is the 'vimfiles' exist?"
-$vimFiles  "$uprofile/vimfiles"
+$vimFiles = "$uprofile/vimfiles"
 # 
 # rename the existing vimfiles to vimOLD
 # 
@@ -22,7 +22,7 @@ if (Test-Path -Path $vimFiles) {
 	Rename-Item -Path "$vimFiles" -NewName "$vimOld"
 }
 
-$listOfSubdirs  @("vimfiles", "vimfiles/autoload", "vimfiles/bundle", "vimfiles/colors")
+$listOfSubdirs = @("vimfiles", "vimfiles/autoload", "vimfiles/bundle", "vimfiles/colors")
 
 foreach ($onesubdir in $listOfSubdirs) {
 	New-Item -ItemType Directory -Path "$uprofile" -Name $onesubdir
